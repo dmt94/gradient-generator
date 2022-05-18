@@ -6,6 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gradient Background</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Roboto:wght@300;400;500&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="stylesheet" href="style.css">
@@ -19,7 +24,7 @@
     </div>
 
 
-    
+
 
     <div class="color-picker-div grid-wrapper">
 
@@ -38,22 +43,46 @@
     <h2>Current CSS Background</h2>
 
     <h3></h3>
-    <div class="div-bottom-right">
-      <span class="direction-sample">Sample</span>
-      <div class="testing-gradient" id="br-gradient"></div>
-      <span class="gradient-direction">Bottom Right</span>
-      <div class="color-picker-div direction-color-picker">
+    <div class="div-preview">
+      <div class="div-bottom-right">
+        <span class="direction-sample">Preview</span>
+        <div class="testing-gradient" id="br-gradient"></div>
 
-        <div class="div-color-picker">
-          <input class="br-color color-picker br1-color" type="color" name="color1"
-            value="#F59494">
+        <div>
+          <input type="range" id="preview-angle" name="preview-angle" min="0"
+            max="360" step="1">
         </div>
-  
-        <div class="div-color-picker">
-          <input class="br-color color-picker br2-color" type="color" name="color2"
-            value="#F8B4FA">
+        <div id="degree-prev-div">
+          <span id="degree-preview">180°</span>
         </div>
-  
+
+        <div class="color-picker-div direction-color-picker">
+          <div class="div-color-picker">
+            <input class="br-color color-picker br1-color" type="color"
+              name="color1" value="#F59494">
+            <div class="hex-value-div">
+              <span class="hex-value-prev" id="1-hex">#F59494</span>
+            </div>
+          </div>
+
+          <div class="div-color-picker">
+            <input class="br-color color-picker br2-color" type="color"
+              name="color2" value="#F8B4FA">
+            <div class="hex-value-div">
+              <span class="hex-value-prev" id="2-hex">#F8B4FA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="preview-bg">
+        <div class="div-descr">
+          <h2>Code</h2>
+          <div class="copy-area">
+            <span id="generated-code">background: linear-gradient(90deg, #000
+              0%, #fff 100%);</span>
+            <button id="gradient-copy-btn">copy</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
