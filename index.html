@@ -14,35 +14,52 @@
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/round-slider@1.6.1/dist/roundslider.min.css">
 
 </head>
 
 <body id="gradient">
   <div class="main-container">
     <div class="title-div">
-      <h1>Simple Gradient Generator</h1>
+      <h1>Simple</h1>
+      <span>Find your theme</span>
     </div>
-
-
-
-
     <div class="color-picker-div grid-wrapper">
 
       <div class="div-color-picker">
         <input class="color1 color-picker" type="color" name="color1"
-          value="#F59494">
+          value="#A1AFF7">
       </div>
 
       <div class="div-color-picker">
         <input class="color2 color-picker" type="color" name="color2"
-          value="#F8B4FA">
+          value="#FBD6C6">
       </div>
 
     </div>
 
-    <h2>Current CSS Background</h2>
+    <input type="range" name="" id="main-bg-slider" class="smile-slider" min="0"
+      max="360" step="1">
 
-    <h3></h3>
+    <div id="bg-degree">
+      <span id="bg-degree-preview">180°</span>
+    </div>
+
+
+    <h2>Current CSS Background Code:</h2>
+
+    <div class="div-bg-code">
+      <h3 class="bg-code">background: linear-gradient(to right, #A1AFF7,
+        #FBD6C6);</h3>
+      <div class="tooltip">
+        <button id="bg-copy-btn" onclick="copyPaste()" onmouseout="outFunc()">
+          <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+          copy</button>
+      </div>
+    </div>
+
+
     <div class="div-preview">
       <div class="div-bottom-right">
         <span class="direction-sample">Preview</span>
@@ -76,21 +93,35 @@
       </div>
       <div class="preview-bg">
         <div class="div-descr">
-          <h2>Code</h2>
+          <h2>Code:</h2>
           <div class="copy-area">
-            <span id="generated-code">background: linear-gradient(180deg, #8078db, #b4eafa);</span>
+            <span id="generated-code">background: linear-gradient(180deg,
+              #8078db, #b4eafa);</span>
             <div class="tooltip">
-              <button id="gradient-copy-btn" onclick="copyPaste()" onmouseout="outFunc()">
-                <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+              <button id="gradient-copy-btn" onclick="copyPaste()"
+                onmouseout="outFunc()">
+                <span class="tooltiptext" id="myTooltip">Copy to
+                  clipboard</span>
                 copy</button>
             </div>
-            
+
           </div>
         </div>
       </div>
     </div>
   </div>
 
+  <div class="div-color-palette div-preview">
+    <h1 class="color-palette">Color Palette</h1>
+    <img src="/bullet.png" alt="" class="img-test">
+    <div class="div-palette-container div-preview">
+
+    </div>
+  </div>
+  <script
+    src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/round-slider@1.6.1/dist/roundslider.min.js"></script>
   <script type="text/javascript" src="script.js"></script>
 </body>
 

@@ -7,16 +7,19 @@ let body = document.getElementById("gradient");
 let degreeInput = document.getElementById("preview-angle");
 let degreeDisplay = document.getElementById("degree-preview");
 
+
+let bgDegreeInput = document.getElementById("main-bg-slider");
+let bgDegreeDisplay = document.getElementById("bg-degree-preview");
+
 function changeBackground() {
-  body.style.background = `linear-gradient(to right, ${color1.value}, ${color2.value})`;
-  console.log(color2.value);
+  body.style.background = `linear-gradient(${bgDegreeInput.value}deg, ${color1.value}, ${color2.value})`;
+  
+  css.textContent = `background: linear-gradient(${bgDegreeInput.value}deg, ${color1.value}, ${color2.value})`;
 }
 
 color1.addEventListener("input", changeBackground);
 
 color2.addEventListener("input", changeBackground);
-
-
 
 
 // gradient direction sample
@@ -31,6 +34,7 @@ function brGradientBg() {
   brGradient.style.background = `linear-gradient(${degreeInput.value}deg, ${brColor1.value}, ${brColor2.value})`;
   grabHex(firstHex, brColor1);
   grabHex(secHex, brColor2);
+
 }
 
 brColor1.addEventListener("input", brGradientBg);
@@ -38,10 +42,11 @@ brColor1.addEventListener("input", changeLinearGradientCode);
 brColor2.addEventListener("input", brGradientBg);
 brColor2.addEventListener("input", changeLinearGradientCode);
 
+
 // generated code
 
 function displayLinearGradientCode(color1, color2, deg) {
-  return `linear-gradient(${deg.value}deg, ${color1.value}, ${color2.value})`;
+  return `background: linear-gradient(${deg.value}deg, ${color1.value}, ${color2.value})`;
 }
 
 let linearGradientCode = document.getElementById("generated-code");
@@ -57,17 +62,25 @@ degreeInput.addEventListener("input", brGradientBg);
 degreeInput.addEventListener("input", changeLinearGradientCode);
 
 function previewDegree() {
-  console.log(degreeInput.value);
-  degreeDisplay.innerText = degreeInput.value + '°';
+  degreeDisplay.innerText = degreeInput.value + `°`;
 }
 
 function grabHex(span, element) {
   span.innerText = `${element.value}`;
 }
 
-let copyBtn = document.getElementById('gradient-copy-btn');
+function previewBgDegree() {
+  bgDegreeDisplay.innerText = bgDegreeInput.value + `°`;
+}
+
+bgDegreeInput.addEventListener("input", previewBgDegree);
+bgDegreeInput.addEventListener("input", changeBackground);
+
+
 
 // copy paste
+let copyBtn = document.getElementById('gradient-copy-btn');
+
 function copyPaste() {
   /* Alert the copied text */
 
@@ -93,3 +106,4 @@ function outFunc() {
   let tooltip = document.getElementById("myTooltip");
   tooltip.innerHTML = "Copy to clipboard";
 }
+
