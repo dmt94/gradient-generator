@@ -8,7 +8,7 @@ let degreeInput = document.getElementById("preview-angle");
 let degreeDisplay = document.getElementById("degree-preview");
 
 function changeBackground() {
-  body.style.background = `linear-gradient(180deg, ${color1.value}, ${color2.value})`;
+  body.style.background = `linear-gradient(to right, ${color1.value}, ${color2.value})`;
   console.log(color2.value);
 }
 
@@ -17,19 +17,7 @@ color1.addEventListener("input", changeBackground);
 color2.addEventListener("input", changeBackground);
 
 
-// degree slider
 
-degreeInput.addEventListener("input", previewDegree);
-degreeInput.addEventListener("input", brGradientBg);
-
-function previewDegree() {
-  console.log(degreeInput.value);
-  degreeDisplay.innerText = degreeInput.value + '°';
-}
-
-function grabHex(span, element) {
-  span.innerText = `${element.value}`;
-}
 
 // gradient direction sample
 
@@ -46,4 +34,62 @@ function brGradientBg() {
 }
 
 brColor1.addEventListener("input", brGradientBg);
+brColor1.addEventListener("input", changeLinearGradientCode);
 brColor2.addEventListener("input", brGradientBg);
+brColor2.addEventListener("input", changeLinearGradientCode);
+
+// generated code
+
+function displayLinearGradientCode(color1, color2, deg) {
+  return `linear-gradient(${deg.value}deg, ${color1.value}, ${color2.value})`;
+}
+
+let linearGradientCode = document.getElementById("generated-code");
+
+function changeLinearGradientCode() {
+  linearGradientCode.innerText = displayLinearGradientCode(brColor1, brColor2, degreeInput);
+}
+
+// degree slider
+
+degreeInput.addEventListener("input", previewDegree);
+degreeInput.addEventListener("input", brGradientBg);
+degreeInput.addEventListener("input", changeLinearGradientCode);
+
+function previewDegree() {
+  console.log(degreeInput.value);
+  degreeDisplay.innerText = degreeInput.value + '°';
+}
+
+function grabHex(span, element) {
+  span.innerText = `${element.value}`;
+}
+
+let copyBtn = document.getElementById('gradient-copy-btn');
+
+// copy paste
+function copyPaste() {
+  /* Alert the copied text */
+
+  let copyText = document.createElement("input");                  
+  copyText.style="display:none";
+  copyText.value  = linearGradientCode.innerText;
+  copyText.setAttribute('id', 'copyTextId')     
+  document.body.appendChild(copyText); 
+
+  let copyTextSelect = document.getElementById("copyTextId");
+  copyTextSelect.select();
+  copyTextSelect.setSelectionRange(0, 99999); /*For mobile devices*/
+  navigator.clipboard.writeText(copyTextSelect.value).then(() => {
+    console.log("to the second method...")
+  }).catch(() => {
+    var retVal = document.execCommand("copy");
+  });
+  let tooltip = document.getElementById("myTooltip");
+  tooltip.innerHTML = "Copied to clipboard";
+}
+
+function outFunc() {
+  let tooltip = document.getElementById("myTooltip");
+  tooltip.innerHTML = "Copy to clipboard";
+}
