@@ -13,12 +13,10 @@ let bgDegreeDisplay = document.getElementById("bg-degree-preview");
 
 function changeBackground() {
   body.style.background = `linear-gradient(${bgDegreeInput.value}deg, ${color1.value}, ${color2.value})`;
-  
   css.textContent = `background: linear-gradient(${bgDegreeInput.value}deg, ${color1.value}, ${color2.value})`;
 }
 
 color1.addEventListener("input", changeBackground);
-
 color2.addEventListener("input", changeBackground);
 
 
@@ -34,7 +32,6 @@ function brGradientBg() {
   brGradient.style.background = `linear-gradient(${degreeInput.value}deg, ${brColor1.value}, ${brColor2.value})`;
   grabHex(firstHex, brColor1);
   grabHex(secHex, brColor2);
-
 }
 
 brColor1.addEventListener("input", brGradientBg);
