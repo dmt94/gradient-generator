@@ -384,12 +384,12 @@ input[type="range"]::-webkit-slider-thumb {
 
 
 /* tooltip */
-.tooltip {
+.tooltip, .tooltip2 {
   position: relative;
   display: inline-block;
 }
 
-.tooltip .tooltiptext {
+.tooltip .tooltiptext, .tooltip2 .tooltiptext {
   visibility: hidden;
   width: 140px;
   background-color: rgba(253, 253, 179, 0.792);
@@ -407,7 +407,7 @@ input[type="range"]::-webkit-slider-thumb {
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
-.tooltip .tooltiptext::after {
+.tooltip .tooltiptext::after, .tooltip2 .tooltiptext::after  {
   content: "";
   position: absolute;
   top: 100%;
@@ -418,7 +418,15 @@ input[type="range"]::-webkit-slider-thumb {
   border-color: #555 transparent transparent transparent;
 }
 
-.tooltip:hover .tooltiptext {
+#bg-copy-btn {
+  margin-right: 5px;
+}
+
+.tooltip2 .tooltiptext {
+  bottom: 120%;
+}
+
+.tooltip:hover .tooltiptext, .tooltip2:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
 }

@@ -13,6 +13,8 @@ let bgDegreeDisplay = document.getElementById("bg-degree-preview");
 
 let rnBgButton = document.getElementById('random-bg-button');
 
+
+
 function changeBackground() {
   body.style.background = `linear-gradient(${bgDegreeInput.value}deg, ${color1.value}, ${color2.value})`;
   css.textContent = `background: linear-gradient(${bgDegreeInput.value}deg, ${color1.value}, ${color2.value})`;
@@ -88,8 +90,6 @@ bgDegreeInput.addEventListener("input", previewBgDegree);
 bgDegreeInput.addEventListener("input", changeBackground);
 
 
-
-
 // copy paste
 let copyBtn = document.getElementById('gradient-copy-btn');
 
@@ -119,3 +119,30 @@ function outFunc() {
   tooltip.innerHTML = "Copy to clipboard";
 }
 
+let bgCopyBtn = document.getElementById('bg-copy-btn');
+
+function copyPaste2() {
+  /* Alert the copied text */
+
+  let copyText = document.createElement("input");                  
+  copyText.style="display:none";
+  copyText.value  = css.textContent;
+  copyText.setAttribute('id', 'copyTextId2')     
+  document.body.appendChild(copyText); 
+
+  let copyTextSelect = document.getElementById("copyTextId2");
+  copyTextSelect.select();
+  copyTextSelect.setSelectionRange(0, 99999); /*For mobile devices*/
+  navigator.clipboard.writeText(copyTextSelect.value).then(() => {
+    console.log("to the second method...")
+  }).catch(() => {
+    var retVal = document.execCommand("copy");
+  });
+  let tooltip = document.getElementById("2myTooltip");
+  tooltip.innerHTML = "Copied to clipboard";
+}
+
+function outFunc2() {
+  let tooltip = document.getElementById("2myTooltip");
+  tooltip.innerHTML = "Copy to clipboard";
+}
