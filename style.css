@@ -407,20 +407,87 @@ input[type="range"]::-webkit-slider-thumb {
   position: absolute;
   width: 100px;
   top: 68px;
-  /* right: 70px; */
 }
 
 .div-palette-container {
   width: 90%;
-  height: 100vh;
   background-color: #8078db00;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   margin: 20px;
   border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.palette-wrap {
+  width: 90%;
+  height: 80%;
+  background-color: #4377e800;
+  display: grid;
+  margin: 20px;
+  grid-template-columns: repeat(auto-fill, 170px);
+  justify-content: center;
+}
 
+.color-sample-div {
+  width: 170px;
+  height: 290px;
+  background-color: #FFF4F4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  border-radius: 20px;
+}
 
+.the-color {
+  width: 70%;
+  height: 90px;
+  background-color: #7aa3e4;
+  border-radius: 10px;
+  padding: 2px;
+  border: 1px solid white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.color-palette-hex-value {
+  padding-top: 10px;
+  font-weight: 800;
+  font-size: 13px;
+  color:rgb(88, 86, 90);
+  letter-spacing: 1px;
+  font-family: 'Poppins';
+}
+
+.color-converter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.color-palette-hex-value:hover {
+  cursor: pointer;
+  color:rgb(106, 98, 98);
+}
+
+.color-sample-div > .color-picker {
+  width: 40px;
+  height: 40px;
+}
+
+.color-sample-div > .color-picker::-webkit-color-swatch {
+  border-radius: 50%;
+  border: 5px solid rgb(255, 255, 255);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.color-sample-div > .color-picker::-webkit-color-swatch:hover {
+  border: 1px solid rgba(236, 221, 221, 0);
+  transition: all 500ms linear;
+}
 
 @media only screen and (max-width: 600px) {
   .title-div > h1 {
