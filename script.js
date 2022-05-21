@@ -11,6 +11,8 @@ let degreeDisplay = document.getElementById("degree-preview");
 let bgDegreeInput = document.getElementById("main-bg-slider");
 let bgDegreeDisplay = document.getElementById("bg-degree-preview");
 
+let rnBgButton = document.getElementById('random-bg-button');
+
 function changeBackground() {
   body.style.background = `linear-gradient(${bgDegreeInput.value}deg, ${color1.value}, ${color2.value})`;
   css.textContent = `background: linear-gradient(${bgDegreeInput.value}deg, ${color1.value}, ${color2.value})`;
@@ -18,6 +20,18 @@ function changeBackground() {
 
 color1.addEventListener("input", changeBackground);
 color2.addEventListener("input", changeBackground);
+
+rnBgButton.addEventListener("click", changebgRandom);
+
+
+
+function changebgRandom() {
+  let randomColorOne = Math.floor(Math.random()*16777215).toString(16);
+  let randomColorTwo = Math.floor(Math.random()*16777215).toString(16);
+  let randomDegree = Math.floor(Math.random() * 360);
+  body.style.background = `linear-gradient(${randomDegree}deg, #${randomColorOne}, #${randomColorTwo})`;
+  css.textContent = `background: linear-gradient(${randomDegree}deg, #${randomColorOne}, #${randomColorTwo})`;
+}
 
 
 // gradient direction sample
@@ -72,6 +86,7 @@ function previewBgDegree() {
 
 bgDegreeInput.addEventListener("input", previewBgDegree);
 bgDegreeInput.addEventListener("input", changeBackground);
+
 
 
 

@@ -24,6 +24,7 @@
     <div class="title-div">
       <h1>Simple</h1>
       <span>Find your theme</span>
+      <button id="random-bg-button" class="random-colors animate__animated animate__pulse animate__infinite">Leave it up to Chance</button>
     </div>
     <div class="color-picker-div grid-wrapper">
 
@@ -47,16 +48,20 @@
     </div>
 
 
-    <h2>Current CSS Background Code:</h2>
+    
 
     <div class="div-bg-code">
-      <h3 class="bg-code">background: linear-gradient(to right, #A1AFF7,
-        #FBD6C6);</h3>
-      <div class="tooltip">
-        <button id="bg-copy-btn" onclick="copyPaste()" onmouseout="outFunc()">
-          <span class="tooltiptext" class="myTooltip">Copy to clipboard</span>
-          copy</button>
+      <h2 class="current-css-bg">Current CSS Background Code:</h2>
+      <div class="code-and-copy">
+        <h3 class="bg-code">background: linear-gradient(to right, #A1AFF7,
+          #FBD6C6);</h3>
+        <div class="tooltip">
+          <button id="bg-copy-btn" onclick="copyPaste()" onmouseout="outFunc()">
+            <span class="tooltiptext" class="myTooltip">Copy to clipboard</span>
+            copy</button>
+        </div>
       </div>
+     
     </div>
 
 
@@ -117,11 +122,14 @@
     </div>
   </div>
 
-  <div class="div-color-palette div-preview">
+  
+  <div class="div-add-button div-palette-button">
+    <button id="button-add-palette" class="add-more-button">+</button>
+  </div>
+  <div class="div-color-palette div-preview">    
     <h1 class="color-palette">Your Color Palette</h1>
-    <img src="/bullet.png" alt="" class="img-test">
+    <img src="/bullet.png" alt="" class="img-test animate__animated animate__pulse animate__infinite">
     <div class="div-palette-container div-preview">
-
       <div class="palette-wrap">
 
         <div class="color-sample-div">
