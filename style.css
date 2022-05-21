@@ -382,6 +382,39 @@ input[type="range"]::-webkit-slider-thumb {
   color: white;
 }
 
+/* gradient remove button */
+.remove {
+  margin-top: 5px;
+}
+
+.remove-btn {
+  outline: none;
+  border: none;
+  background-color: #d5dcf890;
+  color: rgb(61, 59, 59);
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 900;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.remove-btn:hover {
+  background-color: #313131;
+  color: white;
+}
+
+.palette-remove-btn {
+  font-size: 20px;
+  width: 20px;
+  height: 20px;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(248, 221, 221, 0.705);
+  margin: 10px;
+}
 
 /* tooltip */
 .tooltip, .tooltip2 {
@@ -497,7 +530,7 @@ input[type="range"]::-webkit-slider-thumb {
 
 .color-sample-div {
   width: 170px;
-  height: 290px;
+  height: 100%;
   background-color: #FFF4F4;
   display: flex;
   flex-direction: column;
@@ -510,9 +543,10 @@ input[type="range"]::-webkit-slider-thumb {
 
 .the-color {
   width: 70%;
-  height: 90px;
-  background-color: #7aa3e4;
-  border-radius: 10px;
+  position: relative;
+  height: 120px;
+  background-color: #fda4cc;
+  border-radius: 50%;
   padding: 2px;
   border: 1px solid white;
   margin-bottom: 10px;
