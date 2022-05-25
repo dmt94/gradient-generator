@@ -8,6 +8,42 @@ body {
   align-items: center;
 }
 
+/* navbar */
+.navbar {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.navbar-brand {
+  font-size: 28px;
+}
+
+#navbarNav > ul > li.nav-item {
+  color: rgb(46, 43, 43);
+  align-self: center;
+  font-weight: 500;
+  padding: 5px;
+  font-family: 'Poppins';
+}
+
+#navbarNav > ul {
+  width: 100%;
+}
+
+#navbarNav > ul > .nav-item > .nav-link:hover {
+  color:#b09dfb;
+}
+
+.slogan-div {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+
 /* container */
 
 .main-container {
@@ -100,6 +136,7 @@ body {
 .br-color {
   width: 50px;
   height: 50px;
+  margin: 10px;
 }
 
 .br-color::-webkit-color-swatch {
@@ -141,6 +178,11 @@ h3 {
   text-transform: none;
   letter-spacing: 0.01em;
   font-weight: 500;
+  font-size: 20px;
+}
+
+.current-css-bg {
+  margin: 20px;
 }
 
 .div-bg-code {
@@ -153,6 +195,7 @@ h3 {
   width: 80%;
   justify-content: center;
   align-items: center;
+  margin: 20px;
 }
 
 .code-and-copy {
@@ -343,7 +386,7 @@ input[type="range"]::-webkit-slider-thumb {
   border-radius: 50%;
   width: 50px;
   height: 50px;
-  font-size: 45px;
+  font-size: 35px;
   text-align: center;
   margin-top: 20px;
   background-color: #ffd2d2b2;
@@ -390,7 +433,7 @@ input[type="range"]::-webkit-slider-thumb {
 .remove-btn {
   outline: none;
   border: none;
-  background-color: #d5dcf890;
+  background-color: #d5dcf833;
   color: rgb(61, 59, 59);
   cursor: pointer;
   border-radius: 10px;
@@ -542,14 +585,14 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 .the-color {
-  width: 70%;
+  width: 120px;
   position: relative;
   height: 120px;
   background-color: #fda4cc;
   border-radius: 50%;
   padding: 2px;
   border: 1px solid white;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
@@ -575,8 +618,8 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 .color-sample-div > .color-picker {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 49px;
 }
 
 .color-sample-div > .color-picker::-webkit-color-swatch {

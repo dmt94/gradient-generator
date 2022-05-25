@@ -13,18 +13,53 @@
     rel="stylesheet">
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+    crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/round-slider@1.6.1/dist/roundslider.min.css">
 
 </head>
 
 <body id="gradient">
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Simple</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarNav" aria-controls="navbarNav"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page"
+              href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Color Converter</a>
+          </li>
+          <li class="nav-item slogan">
+           
+          </li>
+        </ul>
+        <div class="slogan-div">
+          <span class="slogan-span">Find your theme. A Simple Pick.</span>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- end navbar -->
+
   <div class="main-container">
     <div class="title-div">
-      <h1>Simple</h1>
-      <span>Find your theme. A Simple Pick.</span>
-      <button id="random-bg-button" class="random-colors animate__animated animate__pulse animate__infinite">Leave it up to Chance</button>
+      <button id="random-bg-button"
+        class="random-colors animate__animated animate__pulse animate__infinite">Leave
+        it up to Chance</button>
     </div>
     <div class="color-picker-div grid-wrapper">
 
@@ -51,10 +86,13 @@
     <div class="div-bg-code">
       <h2 class="current-css-bg">Current CSS Background Code:</h2>
       <div class="code-and-copy">
-        <h3 class="bg-code">background: linear-gradient(to right, #A1AFF7, #FBD6C6);</h3>
+        <h3 class="bg-code">background: linear-gradient(to right, #A1AFF7,
+          #FBD6C6);</h3>
         <div class="tooltip2">
-          <button id="bg-copy-btn" onclick="copyPaste2()" onmouseout="outFunc2()">
-            <span class="tooltiptext" class="myTooltip2" id="2myTooltip">Copy to clipboard
+          <button id="bg-copy-btn" onclick="copyPaste2()"
+            onmouseout="outFunc2()">
+            <span class="tooltiptext" class="myTooltip2" id="2myTooltip">Copy to
+              clipboard
             </span>copy
           </button>
         </div>
@@ -110,8 +148,6 @@
             </div>
           </div> -->
 
-
-
         </div>
       </div>
       <div class="preview-bg">
@@ -133,19 +169,21 @@
     </div>
   </div>
 
-  
+
   <div class="div-add-button div-palette-button">
     <button id="button-add-palette" class="add-more-button">+</button>
   </div>
-  <div class="div-color-palette div-preview">    
+  <div class="div-color-palette div-preview">
     <h1 class="color-palette">Your Color Palette</h1>
-    <img src="/bullet.png" alt="" class="img-test animate__animated animate__pulse animate__infinite">
+    <img src="/bullet.png" alt=""
+      class="img-test animate__animated animate__pulse animate__infinite">
     <div class="div-palette-container div-preview">
       <div class="palette-wrap">
 
         <div class="color-sample-div">
           <div class="the-color"></div>
-          <input type="color" name="palette color" class="color-picker" value="#7aa3e4">
+          <input type="color" name="palette color" class="color-picker"
+            value="#7aa3e4">
           <div class="color-converter">
             <span class="color-palette-hex-value">#8078db</span>
             <span class="color-palette-hex-value">rgb(122, 168, 228)</span>
@@ -158,60 +196,27 @@
 
         <div class="color-sample-div">
           <div class="the-color"></div>
-          <input type="color" name="palette color" class="color-picker" value="#7aa3e4">
+          <input type="color" name="palette color" class="color-picker"
+            value="#7aa3e4">
           <span class="color-palette-hex-value">#8078db</span>
         </div>
 
         <div class="color-sample-div">
           <div class="the-color"></div>
-          <input type="color" name="palette color" class="color-picker" value="#7aa3e4">
+          <input type="color" name="palette color" class="color-picker"
+            value="#7aa3e4">
           <span class="color-palette-hex-value">#8078db</span>
         </div>
-        <!-- <div class="color-sample-div">
-          <div class="the-color"></div>
-          <input type="color" name="palette color" class="color-picker" value="#7aa3e4">
-          <span class="color-palette-hex-value">#8078db</span>
-        </div>
-        <div class="color-sample-div">
-          <div class="the-color"></div>
-          <input type="color" name="palette color" class="color-picker" value="#7aa3e4">
-          <span class="color-palette-hex-value">#8078db</span>
-        </div>
-        <div class="color-sample-div">
-          <div class="the-color"></div>
-          <input type="color" name="palette color" class="color-picker" value="#7aa3e4">
-          <span class="color-palette-hex-value">#8078db</span>
-        </div>
-        <div class="color-sample-div">
-          <div class="the-color"></div>
-          <input type="color" name="palette color" class="color-picker" value="#7aa3e4">
-          <span class="color-palette-hex-value">#8078db</span>
-        </div>
-        <div class="color-sample-div">
-          <div class="the-color"></div>
-          <input type="color" name="palette color" class="color-picker" value="#7aa3e4">
-          <span class="color-palette-hex-value">#8078db</span>
-        </div>
-        <div class="color-sample-div">
-          <div class="the-color"></div>
-          <input type="color" name="palette color" class="color-picker" value="#7aa3e4">
-          <span class="color-palette-hex-value">#8078db</span>
-        </div>
-        <div class="color-sample-div">
-          <div class="the-color"></div>
-          <input type="color" name="palette color" class="color-picker" value="#7aa3e4">
-          <span class="color-palette-hex-value">#8078db</span>
-        </div> -->
 
-
-
+        <!--end of palette wrap-->
       </div>
-    
 
     </div>
   </div>
   <script
-    src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
   <script
     src="https://cdn.jsdelivr.net/npm/round-slider@1.6.1/dist/roundslider.min.js"></script>
   <script type="text/javascript" src="script.js"></script>
