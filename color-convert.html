@@ -53,66 +53,76 @@
   <!-- end navbar -->
 
   <!-- hex to rgb -->
-  <div class="hex-to-rgb-div main-container">
-    <div class="hex-to-rgb-input convert-input">
-      <div class="h-r-input-area input-area">
-        <h3>hex to rgb</h3>
-        <input type="text" id="hex-value">
-        <button id="btn-hex-to-rgb">convert</button>
-      </div>
-      <span class="input-validation" id="h-r-valid">Please input correct hex value. Without
-        #</span>
-    </div>
-
-    <div class="hex-to-rgb-result convert-result">
-      <div class="result-border">
-        <h4 id="hex-to-rgb-result">result goes here</h4>
-        <button id="btn-copy-h-rgb" class="copy-btn">Copy</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- auto hex -> rgb or rgb -> hex -->
-  <div class="auto-div main-container">
-    <div class="auto-input convert-input">
-      <div class="auto-input-area input-area">
-        <h3>hex to rgb OR rgb to hex</h3>
-        <input type="text" id="auto-value">
-        <button id="btn-auto">convert</button>
-      </div>
-      <span class="input-validation" id="auto-valid">Please input correct hex or rgb value.</span>
-    </div>
-
-    <div class="auto-result convert-result">
-      <div class="result-border">
-        <h4 id="auto-result">rgb(254, 239, 233)</h4>
-        <button id="btn-copy-auto" class="copy-btn">Copy</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- rgb to hex -->
-  <div class="rgb-to-hex-div main-container">
-    <div class="rgb-to-hex-input convert-input">
-      <div class="rgb-to-hex-input-area input-area">
-        <h3>rgb to hex</h3>
-        <div class="rgb-hex-input-wrap">
-          <input type="text" id="1-rgb-hex-value" class="rgb-input">
-          <input type="text" id="2-rgb-hex-value" class="rgb-input">
-          <input type="text" id="3-rgb-hex-value" class="rgb-input">
+  <div class="container">
+    <div class="hex-to-rgb-div main-container">
+      <div class="hex-to-rgb-input convert-input">
+        <div class="h-r-input-area input-area">
+          <h3>hex to rgb</h3>
+          <input type="text" id="hex-value">
+          <button id="btn-hex-to-rgb">convert</button>
         </div>
-        <button id="btn-rgb-hex">convert</button>
+        <span class="input-validation" id="h-r-valid">Please input correct hex
+          value. Without
+          #</span>
       </div>
-      <span class="input-validation" id="auto-valid">Please input correct rgb value. No special characters.</span>
+
+      <div class="hex-to-rgb-result convert-result">
+        <div class="result-border">
+          <h4 id="hex-to-rgb-result">result goes here</h4>
+          <button id="btn-copy-h-rgb" class="copy-btn">Copy</button>
+        </div>
+        <div id="hex-rgb-prev" class="color-prev"></div>
+      </div>
     </div>
 
-    <div class="rgb-to-hex-result convert-result">
-      <div class="result-border">
-        <h4 id="rgb-to-hex-result">#323131</h4>
-        <button id="btn-copy-rgb-h" class="copy-btn">Copy</button>
+    <!-- auto hex -> rgb or rgb -> hex -->
+    <div class="auto-div main-container">
+      <div class="auto-input convert-input">
+        <div class="auto-input-area input-area">
+          <h3>hex to rgb OR rgb to hex</h3>
+          <input type="text" id="auto-value">
+          <button id="btn-auto">convert</button>
+        </div>
+        <!-- <span class="input-validation" id="auto-valid">Please input correct hex
+          or rgb value.</span> -->
+        <span class="input-validation" id="auto-valid">Format appropriately. Use commas to separate rgb values. Include # for hex values.</span>
+        
+      </div>
+
+      <div class="auto-result convert-result">
+        <div class="result-border">
+          <h4 id="auto-result">rgb(254, 239, 233)</h4>
+          <button id="btn-copy-auto" class="copy-btn">Copy</button>
+        </div>
+        <div id="auto-color-prev" class="color-prev"></div>
+      </div>
+      
+    </div>
+
+    <!-- rgb to hex -->
+    <div class="rgb-to-hex-div main-container">
+      <div class="rgb-to-hex-input convert-input">
+        <div class="rgb-to-hex-input-area input-area">
+          <h3>rgb to hex</h3>
+          <div class="rgb-hex-input-wrap">
+            <input type="text" id="1-rgb-hex-value" class="rgb-input">
+            <input type="text" id="2-rgb-hex-value" class="rgb-input">
+            <input type="text" id="3-rgb-hex-value" class="rgb-input">
+          </div>
+          <button id="btn-rgb-hex">convert</button>
+        </div>
+        <span class="input-validation" id="auto-valid">Please input correct rgb
+          value.</span>
+      </div>
+
+      <div class="rgb-to-hex-result convert-result">
+        <div class="result-border">
+          <h4 id="rgb-to-hex-result">#323131</h4>
+          <button id="btn-copy-rgb-h" class="copy-btn">Copy</button>
+        </div>
+        <div id="rgb-hex-prev" class="color-prev"></div>
       </div>
     </div>
-  </div>
 
   </div>
 

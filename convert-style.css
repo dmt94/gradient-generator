@@ -2,19 +2,24 @@ body {
   background: linear-gradient(to right, #f7a1a1, #fbc6e2) no-repeat center/cover;
 }
 
+.container {
+  width: 100%;
+}
+
 .hex-to-rgb-div, .auto-div, .rgb-to-hex-div {
   background-color: #f7a1a1;
-  margin: 20px;
+  padding: 10px;
+  margin-bottom: 20px;
   display: flex;
   flex-direction: row;
   padding-bottom: 20px;
   border: 1px solid black;
-  width: 90%;
+  width: 100%;
   justify-content: space-between;
 }
 
 .auto-div {
-  background-color: #fbc6e2;
+  background-color: #ffd7ec;
 }
 
 .rgb-to-hex-div {
@@ -24,7 +29,6 @@ body {
 /* input */
 
 .convert-input, .input-area {
-  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -82,14 +86,30 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 
 .convert-result > .result-border > h4 {
   font-size: 20px;
   padding: 20px;
-  width: 100%;
   text-align: center;
+}
+
+.color-prev {
+  background-color: #c5a4fe;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  border-radius: 50px;
+  border: 1px solid rgb(53, 53, 53);
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.auto-result > .color-prev {
+  background-color: #a5e4e1;
+}
+
+.rgb-to-hex-result > .color-prev {
+  background-color: #a4b6fe;
 }
 
 /* buttons */
@@ -119,11 +139,34 @@ button {
 }
 
 .copy-btn {
-  background-color: #f7d8aa;
   font-weight: 500;
-  border-radius: 10px;
+  /* border-radius: 10px; */
 }
 
-.copy-btn:hover {
-  background-color: #ffb66e;
+#btn-copy-h-rgb {
+  background-color: #dd8080;
+  color: white;
 }
+
+#btn-copy-h-rgb:hover {
+  background-color: #f3c65d;
+}
+
+#btn-copy-auto {
+  background-color: #dd80c6;
+  color: white;
+}
+
+#btn-copy-auto:hover {
+  background-color: #f78dcd;
+}
+
+#btn-copy-rgb-h {
+  background-color: #e2af62;
+  color: white;
+}
+
+#btn-copy-rgb-h:hover {
+  background-color: #f3925d;
+}
+
