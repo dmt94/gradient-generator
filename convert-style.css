@@ -9,7 +9,7 @@ body {
   flex-direction: row;
   padding-bottom: 20px;
   border: 1px solid black;
-  width: 80%;
+  width: 90%;
   justify-content: space-between;
 }
 
@@ -21,7 +21,9 @@ body {
   background-color: rgb(255, 211, 205);
 }
 
-.convert-input {
+/* input */
+
+.convert-input, .input-area {
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -39,27 +41,89 @@ body {
   margin-top: 20px;
   text-align: center;
   width: 70%;
+  font-size: 14px;
+}
+
+/* rgb to hex input */
+
+.rgb-to-hex-input-area {
+  width: 70%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.rgb-hex-input-wrap {
+  width: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rgb-input {
+  width: 60px;
 }
 
 /* results area */
 
+.result-border, .convert-result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .convert-result {
-  margin: 20px;
+  margin: 10px;
   background-color: rgb(255, 242, 226);
   border: 1px solid black;
+  width: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
-  width: 80%;
+  align-items: center;
+  
 }
 
 .convert-result > .result-border > h4 {
   font-size: 20px;
   padding: 20px;
+  width: 100%;
+  text-align: center;
 }
 
 /* buttons */
 
 button {
   border: none;
+  margin: 10px;
+}
+
+#btn-hex-to-rgb {
+  background-color: #dd8080;
+}
+
+#btn-auto {
+  background-color: #f6a0be;
+}
+
+#btn-rgb-hex {
+  background-color: #d4a399;
+}
+
+#btn-hex-to-rgb:hover,
+#btn-auto:hover,
+#btn-rgb-hex:hover {
+  background-color: #323131;
+  color: rgb(254, 239, 233);
+}
+
+.copy-btn {
+  background-color: #f7d8aa;
+  font-weight: 500;
+  border-radius: 10px;
+}
+
+.copy-btn:hover {
+  background-color: #ffb66e;
 }

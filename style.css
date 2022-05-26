@@ -364,7 +364,6 @@ input[type="range"]::-webkit-slider-thumb {
 
 #gradient-copy-btn:hover, #bg-copy-btn:hover {
   box-shadow: 3px 3px 0 #000;
-  /* transform: translate(-1px,-1px); */
   background-color: #8078db;
   color: white;
 }
