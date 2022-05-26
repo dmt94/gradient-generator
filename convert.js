@@ -200,3 +200,72 @@ function autoResultOutput() {
     autoColorPrev.style.background = autoHexToRGB;
   }
 }
+
+//hex -> rgb
+
+let rgbHexInput1 = document.getElementById('1-rgb-hex-value');
+let rgbHexInput2 = document.getElementById('2-rgb-hex-value');
+let rgbHexInput3 = document.getElementById('3-rgb-hex-value');
+//btn
+let rgbHexBtn = document.getElementById('btn-rgb-hex');
+
+//colorPrev
+let rgbHexPrev = document.getElementById('rgb-hex-prev');
+
+//rgb conversion
+let rgbHexResult = document.getElementById('rgb-to-hex-result');
+
+//validation
+let rgbHexValid = document.getElementById('rgb-hex-valid');
+
+//event listener
+
+// hexToRGButton.addEventListener("click", giveResult);
+rgbHexInput1.addEventListener("input", rgbInputCheck);
+rgbHexInput2.addEventListener("input", rgbInputCheck);
+rgbHexInput3.addEventListener("input", rgbInputCheck);
+
+function rgbLengthCheck(val) {
+  return (val.length > 3) ? false : true;
+}
+
+let inputOne;
+let inputTwo;
+let inputThree;
+
+function rgbInputCheck() {
+  inputOne = rgbHexInput1.value;
+  inputTwo = rgbHexInput2.value;
+  inputThree = rgbHexInput3.value;
+
+  let nonDigit = /[\D]/;
+
+  if (inputOne.match(nonDigit) || inputTwo.match(nonDigit) 
+  || inputThree.match(nonDigit) || rgbLengthCheck(inputOne) === false 
+  || rgbLengthCheck(inputTwo) === false || rgbLengthCheck(inputThree) === false) {
+    alert('Input appropriate digits only. Max of 3 digits per value.')
+    return false;
+  }
+
+  console.log(inputOne, inputTwo, inputThree);
+  return true;
+}
+
+rgbHexBtn.addEventListener('click', rgbHexShowResult);
+
+
+function rgbHexShowResult() {
+  if (rgbInputCheck() === false) {
+    alert('Input appropriate digits only. Max of 3 digits per value.');
+    return false;
+  }
+  
+  finalHexValConversion = rgbToHexFn(rgbHexInput1.value, rgbHexInput2.value, rgbHexInput3.value);
+  rgbHexResult.innerText = finalHexValConversion;
+  rgbHexPrev.style.background = finalHexValConversion;
+  
+}
+
+function rgbToHexFn(firstVal, secVal, thirdVal) {
+  return `#${Number(firstVal).toString(16)}${Number(secVal).toString(16)}${Number(thirdVal).toString(16)}`;
+}
