@@ -49,6 +49,10 @@ body {
   visibility: hidden;
 }
 
+#auto-valid {
+  visibility: visible;
+}
+
 /* rgb to hex input */
 
 .rgb-to-hex-input-area {
