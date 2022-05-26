@@ -105,9 +105,21 @@
         <div class="rgb-to-hex-input-area input-area">
           <h3>rgb to hex</h3>
           <div class="rgb-hex-input-wrap">
-            <input type="text" id="1-rgb-hex-value" class="rgb-input">
+            <div class="r div-input-rgb">
+              <span class="rgb-input-s">R</span>
+              <input type="text" id="1-rgb-hex-value" class="rgb-input" required="required">
+            </div>
+
+            <div class="g div-input-rgb">
+              <span class="rgb-input-s">G</span>
             <input type="text" id="2-rgb-hex-value" class="rgb-input">
-            <input type="text" id="3-rgb-hex-value" class="rgb-input">
+            </div>
+           
+            <div class="b div-input-rgb">
+              <span class="rgb-input-s">B</span>
+              <input type="text" id="3-rgb-hex-value" class="rgb-input">
+            </div>
+         
           </div>
           <button id="btn-rgb-hex">convert</button>
         </div>

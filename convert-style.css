@@ -46,12 +46,13 @@ body {
   text-align: center;
   width: 70%;
   font-size: 14px;
+  visibility: hidden;
 }
 
 /* rgb to hex input */
 
 .rgb-to-hex-input-area {
-  width: 70%;
+  width: 100%;
   align-items: center;
   justify-content: center;
   display: flex;
@@ -59,14 +60,27 @@ body {
 }
 
 .rgb-hex-input-wrap {
-  width: 0%;
-  display: flex;
+  width: 60%;
+  display: grid;
   align-items: center;
-  justify-content: center;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+}
+
+.div-input-rgb {
+  display: flex;
+  width: 100%;
+  justify-content:space-around;
+  align-items: center;
 }
 
 .rgb-input {
-  width: 60px;
+  width: 100%;
+}
+
+.rgb-input-s {
+  margin: 10px;
+  font-weight: 500;
 }
 
 /* results area */
@@ -95,21 +109,13 @@ body {
 }
 
 .color-prev {
-  background-color: #c5a4fe;
+  background-color: #c5a4fe00;
   width: 100px;
   height: 100px;
   margin: 10px;
   border-radius: 50px;
   border: 1px solid rgb(53, 53, 53);
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-}
-
-.auto-result > .color-prev {
-  background-color: #a5e4e1;
-}
-
-.rgb-to-hex-result > .color-prev {
-  background-color: #a4b6fe;
 }
 
 /* buttons */
