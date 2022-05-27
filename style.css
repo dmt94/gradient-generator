@@ -322,6 +322,7 @@ input[type="range"]::-webkit-slider-thumb {
 
 .copy-area {
   display: flex;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
   backdrop-filter: blur(16px) saturate(180%);
@@ -371,6 +372,7 @@ input[type="range"]::-webkit-slider-thumb {
 #gradient-copy-btn:focus-visible {
   outline-offset: 1px;
 }
+
 
 #bg-copy-btn {
   background-color: #b096f8;
@@ -461,14 +463,14 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 /* tooltip */
-.tooltip, .tooltip2 {
+.tooltip2 {
   position: relative;
   display: inline-block;
 }
 
-.tooltip .tooltiptext, .tooltip2 .tooltiptext {
+.tooltip2 .tooltiptext {
   visibility: hidden;
-  width: 140px;
+  width: 160px;
   background-color: rgba(253, 253, 179, 0.792);
   color: rgb(58, 54, 54);
   text-align: center;
@@ -484,7 +486,7 @@ input[type="range"]::-webkit-slider-thumb {
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
-.tooltip .tooltiptext::after, .tooltip2 .tooltiptext::after  {
+.tooltip2 .tooltiptext::after  {
   content: "";
   position: absolute;
   top: 100%;

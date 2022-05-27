@@ -97,8 +97,10 @@ function copyPaste() {
   /* Alert the copied text */
 
   let copyText = document.createElement("input");                  
-  copyText.style="display:none";
+  copyText.style="display:none;";
+
   copyText.value  = linearGradientCode.innerText;
+  
   copyText.setAttribute('id', 'copyTextId')     
   document.body.appendChild(copyText); 
 
@@ -112,6 +114,7 @@ function copyPaste() {
   });
   let tooltip = document.getElementById("myTooltip");
   tooltip.innerHTML = "Copied to clipboard";
+  copyText.removeAttribute('id');
 }
 
 function outFunc() {
@@ -140,6 +143,7 @@ function copyPaste2() {
   });
   let tooltip = document.getElementById("2myTooltip");
   tooltip.innerHTML = "Copied to clipboard";
+  copyText.removeAttribute('id');
 }
 
 function outFunc2() {

@@ -85,8 +85,7 @@
     <div class="div-bg-code">
       <h2 class="current-css-bg">Current CSS Background Code:</h2>
       <div class="code-and-copy">
-        <h3 class="bg-code">background: linear-gradient(to right, #A1AFF7,
-          #FBD6C6);</h3>
+        <h3 class="bg-code">background: linear-gradient(to right, #A1AFF7, #FBD6C6);</h3>
         <div class="tooltip2">
           <button id="bg-copy-btn" onclick="copyPaste2()"
             onmouseout="outFunc2()">
@@ -153,15 +152,25 @@
         <div class="div-descr">
           <h2>Code:</h2>
           <div class="copy-area">
-            <span id="generated-code">background: linear-gradient(180deg,
-              #8078db, #b4eafa);</span>
-            <div class="tooltip">
+            <span id="generated-code">background: linear-gradient(180deg, #8078db, #b4eafa);</span>
+
+            <!-- <div class="tooltip">
               <button id="gradient-copy-btn" onclick="copyPaste()"
                 onmouseout="outFunc()">
                 <span class="tooltiptext" id="myTooltip">Copy to
                   clipboard</span>
                 copy</button>
+            </div> -->
+
+            <div class="tooltip2">
+              <button id="bg-copy-btn" onclick="copyPaste()"
+                onmouseout="outFunc()">
+                <span class="tooltiptext myTooltip2" id="myTooltip">Copy to
+                  clipboard
+                </span>copy
+              </button>
             </div>
+
           </div>
         </div>
       </div>
@@ -216,8 +225,7 @@
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
-  <script
-    src="https://cdn.jsdelivr.net/npm/round-slider@1.6.1/dist/roundslider.min.js"></script>
+
   <script type="text/javascript" src="script.js"></script>
 </body>
 
