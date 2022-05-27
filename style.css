@@ -318,6 +318,7 @@ input[type="range"]::-webkit-slider-thumb {
 .div-descr {
   padding: 20px;
   margin: 20px;
+  width: 300px;
 }
 
 .copy-area {
@@ -334,7 +335,9 @@ input[type="range"]::-webkit-slider-thumb {
 
 #generated-code {
   font-weight: 500;
-  width: 80%;
+  /* width: 80%; */
+  font-size: 14px;
+  text-align: center;
 }
 
 #gradient-copy-btn, #bg-copy-btn {
