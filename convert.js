@@ -1,3 +1,4 @@
+
 //hex => rgb
 
 let hexValueInput = document.getElementById('hex-value');
